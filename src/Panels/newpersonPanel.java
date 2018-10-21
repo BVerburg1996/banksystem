@@ -3,8 +3,6 @@ package Panels;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.text.DateFormat;
-
 
 public class newpersonPanel<headers> extends JFrame {
 
@@ -16,7 +14,7 @@ public class newpersonPanel<headers> extends JFrame {
 
     JLabel title = new JLabel("Nieuw account aanmaken");
     JTextField username = new JTextField("Gebruikersnaam");
-    JTextField password = new JTextField("Wachtwoord");
+    JPasswordField password = new JPasswordField("Wachtwoord");
     JTextField name = new JTextField("Voornaam");
     JTextField surname = new JTextField("Achternaam");
     JTextField email = new JTextField("E-mail");
@@ -28,8 +26,8 @@ public class newpersonPanel<headers> extends JFrame {
 
     newpersonPanel(){
         super("B$nk");
-        setSize(500,500);
-        setLocation(0,0);
+        setSize(500, 500);
+        setLocation(700,300);
         panel.setLayout (null);
 
         title.setBounds(125,10,250,60);

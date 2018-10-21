@@ -23,7 +23,7 @@ public class overviewPanel<headers> extends JFrame {
     overviewPanel(){
         super("B$nk");
         setSize(500,500);
-        setLocation(0,0);
+        setLocation(700, 300);
         panel.setLayout (null);
 
         welcome.setBounds(170,10,160,60);
@@ -51,6 +51,7 @@ public class overviewPanel<headers> extends JFrame {
         setNewAccount();
         setPersonalData();
     }
+
     public void setNewTransaction(){
         newTransaction.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {

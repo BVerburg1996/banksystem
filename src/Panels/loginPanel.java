@@ -19,8 +19,8 @@ public class loginPanel extends JFrame {
 
     loginPanel(){
         super("Login B$nk");
-        setSize(300,300);
-        setLocation(500,280);
+        setSize(300,220);
+        setLocation(800,400);
         panel.setLayout (null);
 
         usrname.setBounds(70, 20, 150, 20);

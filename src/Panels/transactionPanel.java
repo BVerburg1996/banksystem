@@ -24,7 +24,7 @@ public class transactionPanel<headers> extends JFrame {
     transactionPanel(){
         super("B$nk");
         setSize(500,500);
-        setLocation(0,0);
+        setLocation(700,300);
         panel.setLayout (null);
 
         title.setBounds(125,10,250,60);

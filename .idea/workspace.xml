@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ce1274-dc61-4e55-bb1c-4f119573db6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Panels/newpersonPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/overviewPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/overviewPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/dataPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/dataPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/loginPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/loginPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/newaccountPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/newpersonPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/newpersonPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/overviewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/overviewPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/transactionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/transactionPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,23 +66,23 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="511" />
+          <entry key="java" value="810" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="511" />
+          <entry key="JAVA" value="810" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -86,36 +92,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Panels/loginPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+            <state relative-caret-position="238">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#150#151#0" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Panels/overviewPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Panels/newbankaccountPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#loginPanel#0;class#loginPanel#0" />
+                <element signature="method#actionlogin#0;class#loginPanel#0" />
+                <element signature="method#setNewPerson#0;class#loginPanel#0" />
               </folding>
             </state>
           </provider>
@@ -125,35 +108,10 @@
         <entry file="file://$PROJECT_DIR$/src/Panels/newpersonPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="245">
-              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+              <caret line="17" column="63" lean-forward="true" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#238#239#0" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Panels/transactionPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Panels/dataPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#newpersonPanel#0;class#newpersonPanel#0" />
               </folding>
             </state>
           </provider>
@@ -202,6 +160,9 @@
         <option value="$PROJECT_DIR$/src/overview.java" />
         <option value="$PROJECT_DIR$/src/personalData.java" />
         <option value="$PROJECT_DIR$/src/loginPanel.java" />
+        <option value="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" />
+        <option value="$PROJECT_DIR$/src/Panels/transactionPanel.java" />
+        <option value="$PROJECT_DIR$/src/Panels/dataPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/overviewPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/loginPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/newpersonPanel.java" />
@@ -256,7 +217,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540124471499" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540127109064" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -305,12 +266,12 @@
       <workItem from="1539868850308" duration="3592000" />
       <workItem from="1539889146297" duration="925000" />
       <workItem from="1539890360334" duration="193000" />
-      <workItem from="1540122976346" duration="1344000" />
+      <workItem from="1540122976346" duration="3813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10673000" />
+    <option name="totallyTimeSpent" value="13142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -401,54 +362,65 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Table.java" />
-    <entry file="file://$PROJECT_DIR$/src/Panels/transactionPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Panels/dataPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="-9">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#dataPanel#0;class#dataPanel#0" />
+            <element signature="method#setBackToMain#0;class#dataPanel#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/loginPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/Panels/transactionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+        <state relative-caret-position="306">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#150#151#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
+            <element signature="method#transactionPanel#0;class#transactionPanel#0" />
+            <element signature="method#setBackToMain#0;class#transactionPanel#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Panels/newbankaccountPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+        <state relative-caret-position="357">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#newaccountPanel#0;class#newaccountPanel#0" />
+            <element signature="method#setBackToMain#0;class#newaccountPanel#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Panels/overviewPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="357">
+          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#overviewPanel#0;class#overviewPanel#0" />
+            <element signature="method#setNewTransaction#0;class#overviewPanel#0" />
+            <element signature="method#setNewAccount#0;class#overviewPanel#0" />
+            <element signature="method#setPersonalData#0;class#overviewPanel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/loginPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#loginPanel#0;class#loginPanel#0" />
+            <element signature="method#actionlogin#0;class#loginPanel#0" />
+            <element signature="method#setNewPerson#0;class#loginPanel#0" />
           </folding>
         </state>
       </provider>
@@ -456,11 +428,10 @@
     <entry file="file://$PROJECT_DIR$/src/Panels/newpersonPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+          <caret line="17" column="63" lean-forward="true" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
+            <element signature="method#newpersonPanel#0;class#newpersonPanel#0" />
           </folding>
         </state>
       </provider>
