@@ -15,10 +15,11 @@ public class loginPanel extends JFrame {
     JLabel pswrd = new JLabel("Wachtwoord: ");
     JTextField txuser = new JTextField(15);
     JPasswordField pass = new JPasswordField(15);
+    JButton newPerson = new JButton("Nieuw account");
 
     loginPanel(){
         super("Login B$nk");
-        setSize(300,200);
+        setSize(300,300);
         setLocation(500,280);
         panel.setLayout (null);
 
@@ -27,17 +28,20 @@ public class loginPanel extends JFrame {
         pswrd.setBounds(70, 65, 150, 20);
         pass.setBounds(70,85,150,20);
         login.setBounds(110,110,80,20);
+        newPerson.setBounds(70,140,150,20);
 
         panel.add(login);
         panel.add(usrname);
         panel.add(txuser);
         panel.add(pswrd);
         panel.add(pass);
+        panel.add(newPerson);
 
         getContentPane().add(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         actionlogin();
+        setNewPerson();
     }
 
     public void actionlogin(){
@@ -56,6 +60,16 @@ public class loginPanel extends JFrame {
                     txuser.requestFocus();
                 }
 
+            }
+        });
+    }
+
+    public void setNewPerson(){
+        newPerson.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                newpersonPanel newpersonPanel =new newpersonPanel();
+                newpersonPanel.setVisible(true);
+                dispose();
             }
         });
     }

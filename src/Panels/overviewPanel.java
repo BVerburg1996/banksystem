@@ -15,7 +15,7 @@ public class overviewPanel<headers> extends JFrame {
 
     JLabel welcome = new JLabel("Welkom <naam>");
     JLabel overview = new JLabel("Overzicht bankaccounts: ");
-    JButton newAccount = new JButton("Nieuw account");
+    JButton newAccount = new JButton("Nieuw bankaccount");
     JButton newTransaction = new JButton("Transactie");
     JButton personalData = new JButton("Persoonsgegevens");
     JPanel panel = new JPanel();
@@ -64,7 +64,7 @@ public class overviewPanel<headers> extends JFrame {
     public void setNewAccount(){
         newAccount.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
-                newaccountPanel newaccount =new newaccountPanel();
+                newbankaccountPanel newaccount =new newbankaccountPanel();
                 newaccount.setVisible(true);
                 dispose();
             }

@@ -5,12 +5,12 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-public class newaccountPanel<headers> extends JFrame {
+public class newbankaccountPanel<headers> extends JFrame {
 
     private Font f = new Font("Arial", Font.BOLD,18);
 
     public static void main(String[] args) {
-        newaccountPanel frameTabel = new newaccountPanel();
+        newbankaccountPanel frameTabel = new newbankaccountPanel();
     }
 
     JLabel title = new JLabel("Nieuw bankaccount");
@@ -21,7 +21,7 @@ public class newaccountPanel<headers> extends JFrame {
     JPanel panel = new JPanel();
 
 
-    newaccountPanel(){
+    newbankaccountPanel(){
         super("B$nk");
         setSize(500,500);
         setLocation(0,0);
