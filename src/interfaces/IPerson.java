@@ -1,10 +1,11 @@
 package interfaces;
 
+import accountManagment.Account;
 import accountManagment.Person;
 
 public interface IPerson {
 
-     void Create(Person person);
+     void CreateAccount(Person person, Account account);
 
      Person Read(String string);
 

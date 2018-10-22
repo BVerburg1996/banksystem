@@ -8,7 +8,9 @@ import java.util.Currency;
 import java.util.List;
 
 public class Account implements IAccount {
-    //private int id;
+
+
+
     private int personID;
     private String userName;
     private String password;
@@ -21,28 +23,16 @@ public class Account implements IAccount {
 
     }
 
-    public Account(int personID, String userName, String password) {
+    public Account(String userName, String password) {
         this.accounts = new ArrayList<Account>();
         this.bankAccounts = new ArrayList<BankAccount>();
-        this.personID = personID;
         this.userName = userName;
         this.password = password;
     }
 
     @Override
-    public void Create(Account account) {
-
-       accountDAO.CreateAccount(account);
-    }
-
-    @Override
-    public Account Read(int id) {
-     return accountDAO.read(id);
-    }
-
-    @Override
-    public void CreateBankAccount(BankAccount bankAccount) {
-        accountDAO.CreateBankAccount(bankAccount);
+    public void CreateBankAccount(BankAccount bankAccount, String accountNumber) {
+        accountDAO.CreateBankAccount(bankAccount, accountNumber);
     }
 
     @Override
@@ -57,28 +47,20 @@ public class Account implements IAccount {
     }
 
     @Override
-    public void CreateTransAction(BankAccount bankAccount, double amount, BankAccount bankAccount2){
-        accountDAO.Deposit(bankAccount, amount);
+    public void CreateTransAction(BankAccount bankAccount, double amount, BankAccount bankAccount2, int accountDeposit, int accountWithdraw){
+        accountDAO.Deposit(bankAccount, amount, accountDeposit);
 
-        accountDAO.WithDraw(bankAccount2, amount);
+        accountDAO.WithDraw(bankAccount2, amount, accountWithdraw);
     }
 
     @Override
     public String toString() {
         return "Account{" +
-                "person=" + personID +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
 
-    public int getpersonID() {
-        return personID;
-    }
-
-    public void setPersonID(int personID) {
-        this.personID = personID;
-    }
 
     public String getUserName() {
         return userName;
@@ -95,6 +77,8 @@ public class Account implements IAccount {
     public void setPassword(String password) {
         this.password = password;
     }
-    
 
+    public int getPersonID() {
+        return personID;
+    }
 }

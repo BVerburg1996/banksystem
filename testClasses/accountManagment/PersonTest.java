@@ -1,29 +1,26 @@
 package accountManagment;
 
+import interfaces.IPerson;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-class PersonTest {
+class PersonTest implements IPerson {
 
+    Person person = new Person("Iemand", "Iemand", "ab25258", "diederikn", "Nederlands");
 
+    Account account = new Account("UserName", "Password");
     @Test
-    public void create() {
+    @Override
+    public void CreateAccount(Person person, Account account) {
 
-        Person person = new Person("Diederik", "Nieuwenhuize", "011010", "wjdnieuw", null, "Dutch");
 
-        person.Create(person);
-
-        assertNotNull(person);
     }
 
     @Test
-    public void read() {
+    @Override
+    public Person Read(String string) {
+        return null;
     }
-
-    @Test
-    public void delete() {
-    }
-
 }

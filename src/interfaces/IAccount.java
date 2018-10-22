@@ -7,17 +7,13 @@ import java.util.List;
 
 public interface IAccount {
 
-    void Create(Account account);
-
-    Account Read(int id);
-
-    void CreateBankAccount(BankAccount bankAccount);
+    void CreateBankAccount(BankAccount bankAccount, String accountNumber);
 
     List<BankAccount> ReadBankAccount(int bankAccountID);
 
     void DeleteBankAccount(BankAccount bankAccount);
 
-    void CreateTransAction(BankAccount bankAccount, double amount, BankAccount bankAccount2);
+    void CreateTransAction(BankAccount bankAccount, double amount, BankAccount bankAccount2, int accountDeposit, int accountWithdraw);
 
 
 }

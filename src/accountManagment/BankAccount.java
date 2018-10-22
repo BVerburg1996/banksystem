@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class BankAccount {
 
-    //private int id;
-    private int accountID;
     private double amount;
     private String description;
 
@@ -13,8 +11,7 @@ public class BankAccount {
 
     }
 
-    public BankAccount(double amount, String description, int accountID){
-        this.accountID = accountID;
+    public BankAccount(double amount, String description){
         this.amount = amount;
         this.description = description;
     }
@@ -35,11 +32,11 @@ public class BankAccount {
         this.description = description;
     }
 
-    public int getAccountID() {
-        return accountID;
-    }
-
-    public void setAccountID(int accountID) {
-        this.accountID = accountID;
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "amount=" + amount +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

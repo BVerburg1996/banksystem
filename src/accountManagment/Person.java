@@ -8,7 +8,8 @@ import java.util.Date;
 import java.util.SortedMap;
 
 public class Person implements IPerson {
-    //private int id;
+
+    private int ID;
     private String firstName;
     private String lastName;
     private String accountNumber;
@@ -19,7 +20,7 @@ public class Person implements IPerson {
     PersonDAO personDAO = new PersonDAO();
     public ArrayList<Person> persons;
 
-    public Person(){
+    public Person(String iemand, String s, String ab25258, String diederikn, String s1){
 
     }
 
@@ -33,12 +34,23 @@ public class Person implements IPerson {
         this.language = language;
     }
 
+    public Person(int ID, String firstName, String lastName, String accountNumber, String email, Date dateOfBirth, String language){
+        persons = new ArrayList<Person>();
+        this.ID = ID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.accountNumber = accountNumber;
+        this.email = email;
+        this.dateOfBirth = dateOfBirth;
+        this.language = language;
+    }
+
 
 
     @Override
-    public void Create(Person person) {
+    public void CreateAccount(Person person, Account account) {
 
-        personDAO.CreatePerson(person);
+        personDAO.CreateAccount(person, account);
     }
 
     @Override
@@ -112,4 +124,7 @@ public class Person implements IPerson {
         this.language = language;
     }
 
+    public int getID() {
+        return ID;
+    }
 }
