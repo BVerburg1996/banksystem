@@ -14,7 +14,7 @@ public class loginPanel extends JFrame {
     JPanel panel = new JPanel();
     JLabel usrname = new JLabel("Gebruikersnaam: ");
     JLabel pswrd = new JLabel("Wachtwoord: ");
-    JTextField txuser = new JTextField(15);
+    static JTextField txuser = new JTextField(15);
     JPasswordField pass = new JPasswordField(15);
     JButton newPerson = new JButton("Nieuw account");
 

@@ -6,6 +6,7 @@ import java.awt.event.*;
 
 
 public class dataPanel<headers> extends JFrame {
+    String getUname = loginPanel.txuser.getText();
 
     private Font f = new Font("Arial", Font.BOLD,18);
 
@@ -13,13 +14,13 @@ public class dataPanel<headers> extends JFrame {
         dataPanel frameTabel = new dataPanel();
     }
 
+
     JLabel title = new JLabel("Persoonlijke gegevens");
 
-    JLabel username = new JLabel("Gebruikersnaam");
-    JLabel name = new JLabel("Voornaam");
-    JLabel surname = new JLabel("Achternaam");
-    JLabel email = new JLabel("E-mail adres");
-    JLabel bday = new JLabel("Verjaardag");
+    JLabel username = new JLabel("Gebruikersnaam: " + overviewPanel.personID);
+    JLabel name = new JLabel("Voornaam: " + overviewPanel.setfirstname);
+    JLabel surname = new JLabel("Achternaam: " + overviewPanel.setsurname);
+    JLabel email = new JLabel("E-mail adres: " + overviewPanel.setemail);
 
     JButton backToMain = new JButton("Terug");
     JPanel panel = new JPanel();
@@ -36,8 +37,6 @@ public class dataPanel<headers> extends JFrame {
         name.setBounds(100,120, 250, 25);
         surname.setBounds(100,150, 150, 25);
         email.setBounds(100,180, 150, 25);
-        bday.setBounds(100,210, 150, 25);
-
         backToMain.setBounds(140,240, 150, 25);
 
         panel.add(title);
@@ -45,7 +44,6 @@ public class dataPanel<headers> extends JFrame {
         panel.add(name);
         panel.add(surname);
         panel.add(email);
-        panel.add(bday);
         panel.add(backToMain);
         title.setFont(f);
 

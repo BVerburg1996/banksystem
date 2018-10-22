@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ce1274-dc61-4e55-bb1c-4f119573db6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b$nk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/b$nk.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/overviewPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/overviewPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/overviewPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/dataPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/dataPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/loginPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/loginPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/accountManagment/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountManagment/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/overviewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/overviewPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,35 +63,35 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="1968" />
+          <entry key="java" value="3645" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1967" />
+          <entry key="JAVA" value="3644" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="14" />
+          <entry key="java" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="14" />
+          <entry key="JAVA" value="16" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Panels/loginPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="51" selection-start-line="51" selection-end-line="52" selection-end-column="95" />
+            <state relative-caret-position="850">
+              <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#150#151#0" expanded="true" />
@@ -106,9 +102,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Panels/overviewPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1887">
+              <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#setNewTransaction#0;class#overviewPanel#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Panels/dataPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#setBackToMain#0;class#dataPanel#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Panels/newbankaccountPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="75">
               <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -203,12 +225,12 @@
         <option value="$PROJECT_DIR$/src/personalData.java" />
         <option value="$PROJECT_DIR$/src/loginPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/transactionPanel.java" />
-        <option value="$PROJECT_DIR$/src/Panels/dataPanel.java" />
-        <option value="$PROJECT_DIR$/src/Panels/overviewPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/newpersonPanel.java" />
         <option value="$PROJECT_DIR$/src/accountManagment/BankAccount.java" />
         <option value="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/loginPanel.java" />
+        <option value="$PROJECT_DIR$/src/Panels/overviewPanel.java" />
+        <option value="$PROJECT_DIR$/src/Panels/dataPanel.java" />
       </list>
     </option>
   </component>
@@ -266,6 +288,12 @@
             </path>
             <path>
               <item name="b$nk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="b$nk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Panels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="b$nk" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -278,7 +306,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540235557555" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540240578579" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/MySQL/mysql-connector-java-8.0.12" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -331,12 +359,12 @@
       <workItem from="1539889146297" duration="925000" />
       <workItem from="1539890360334" duration="193000" />
       <workItem from="1540122976346" duration="5771000" />
-      <workItem from="1540162793567" duration="9867000" />
+      <workItem from="1540162793567" duration="14347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24967000" />
+    <option name="totallyTimeSpent" value="29447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -374,36 +402,36 @@
       <window_info anchor="right" id="TMC Project List" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TMC Test Results" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.329718" />
-      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Maven Projects" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="TMC Project List" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26439232" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35032538" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TMC Test Results" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="TMC Project List" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,18 +455,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Table.java" />
-    <entry file="file://$PROJECT_DIR$/src/Panels/dataPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#dataPanel#0;class#dataPanel#0" />
-            <element signature="method#setBackToMain#0;class#dataPanel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Panels/transactionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -447,20 +463,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#transactionPanel#0;class#transactionPanel#0" />
             <element signature="method#setBackToMain#0;class#transactionPanel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/overviewPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#overviewPanel#0;class#overviewPanel#0" />
-            <element signature="method#setNewTransaction#0;class#overviewPanel#0" />
-            <element signature="method#setNewAccount#0;class#overviewPanel#0" />
-            <element signature="method#setPersonalData#0;class#overviewPanel#0" />
           </folding>
         </state>
       </provider>
@@ -573,7 +575,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Panels/newbankaccountPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="75">
           <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -583,12 +585,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Panels/loginPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="51" selection-start-line="51" selection-end-line="52" selection-end-column="95" />
+        <state relative-caret-position="850">
+          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#150#151#0" expanded="true" />
             <element signature="e#206#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/overviewPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1887">
+          <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setNewTransaction#0;class#overviewPanel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/dataPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setBackToMain#0;class#dataPanel#0" />
           </folding>
         </state>
       </provider>
