@@ -1,5 +1,6 @@
 package Panels;
 
+import java.sql.*;
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -45,20 +46,30 @@ public class loginPanel extends JFrame {
     }
 
     public void actionlogin(){
-        login.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                String puname = txuser.getText();
-                String ppaswd = pass.getText();
-                if(puname.equals("test") && ppaswd.equals("12345")) {
-                    overviewPanel regFace =new overviewPanel();
-                    regFace.setVisible(true);
-                    dispose();
-                } else {
-                    JOptionPane.showMessageDialog(null,"Verkeerd wachtwoord/gebruikersnaam");
-                    txuser.setText("");
-                    pass.setText("");
-                    txuser.requestFocus();
+        login.addActionListener(ae -> {
+
+            try {
+                Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
+                String sql = ("SELECT * FROM account WHERE UserName='"+txuser.getText() + "'");
+                Statement statement = mycon.createStatement();
+                ResultSet login = statement.executeQuery(sql);
+                login.next();
+
+                String filledPassword = pass.getText();
+
+                if (login.getString("Password").equals(filledPassword)) {
+                        overviewPanel regFace = new overviewPanel();
+                        regFace.setVisible(true);
+                        dispose();
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(null,"Verkeerd wachtwoord/gebruikersnaam");
+                        txuser.setText("");
+                        pass.setText("");
+                        txuser.requestFocus();
+                    }
                 }
+            catch (SQLException e) {
 
             }
         });

@@ -1,10 +1,8 @@
 package accountManagment;
 
-import interfaces.IBankAccount;
-
 import java.util.ArrayList;
 
-public class BankAccount implements IBankAccount {
+public class BankAccount {
 
     //private int id;
     private int accountID;

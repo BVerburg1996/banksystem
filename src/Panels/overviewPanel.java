@@ -12,12 +12,12 @@ public class overviewPanel<headers> extends JFrame {
     public static void main(String[] args) {
         overviewPanel frameTabel = new overviewPanel();
     }
-
     JLabel welcome = new JLabel("Welkom <naam>");
     JLabel overview = new JLabel("Overzicht bankaccounts: ");
     JButton newAccount = new JButton("Nieuw bankaccount");
     JButton newTransaction = new JButton("Transactie");
     JButton personalData = new JButton("Persoonsgegevens");
+
     JPanel panel = new JPanel();
 
     overviewPanel(){

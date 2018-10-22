@@ -14,8 +14,10 @@ public class newbankaccountPanel<headers> extends JFrame {
     }
 
     JLabel title = new JLabel("Nieuw bankaccount");
+    JLabel confirmation = new JLabel("Ter Bevestiging");
     JTextField startAmountInput = new JTextField("Hoeveelheid start");
     JTextField descriptionInput = new JTextField("Beschrijving");
+    JTextField bankAccountNumber = new JTextField("Bankaccount nummer");
     JButton submitnewaccount = new JButton("Verzenden");
     JButton backToMain = new JButton("Terug");
     JPanel panel = new JPanel();
@@ -30,13 +32,17 @@ public class newbankaccountPanel<headers> extends JFrame {
         title.setBounds(125,10,250,60);
         startAmountInput.setBounds(100, 80, 250, 25);
         descriptionInput.setBounds(100,130, 250, 25);
-        submitnewaccount.setBounds(140,170, 150, 25);
-        backToMain.setBounds(140,220, 150, 25);
+        bankAccountNumber.setBounds(100,180, 250, 25);
+        confirmation.setBounds(100,160, 250, 25);
+        submitnewaccount.setBounds(140,230, 150, 25);
+        backToMain.setBounds(140,270, 150, 25);
 
         panel.add(title);
         panel.add(startAmountInput);
         panel.add(descriptionInput);
         panel.add(submitnewaccount);
+        panel.add(bankAccountNumber);
+        panel.add(confirmation);
         panel.add(backToMain);
         title.setFont(f);
 
