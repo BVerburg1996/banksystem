@@ -34,7 +34,7 @@ public class overviewPanel<headers> extends JFrame {
     }
 
     JLabel welcome = new JLabel("Welkom " + txuser.getText());
-    JLabel overview = new JLabel("Overzicht bankaccounts: ");
+    JLabel overview = new JLabel("Overzicht bankaccounts");
     JButton newAccount = new JButton("Nieuw bankaccount");
     JButton newTransaction = new JButton("Transactie");
 
