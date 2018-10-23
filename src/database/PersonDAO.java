@@ -31,7 +31,7 @@ public class PersonDAO {
                 statement.executeUpdate();
 
 
-                String sql2 = "SELECT ID FROM person WHERE AccountNumber = " + person.getAccountNumber() + ";";
+                String sql2 = "SELECT ID FROM person WHERE AccountNumber = '" + person.getAccountNumber() + "';";
                 Statement statement4 = conn.createStatement();
                 ResultSet result = statement4.executeQuery(sql2);
                 result.next();
@@ -70,7 +70,7 @@ public class PersonDAO {
             ResultSet result = statement.executeQuery(sql);
 
             result.next();
-            person = new Person(result.getString("FirstName"), result.getString("LastName"), result.getString("AccountNumber"), result.getString("Email"), result.getDate("BirthDate"), result.getString("Language"));
+            person = new Person(result.getString("FirstName"), result.getString("LastName"), result.getString("AccountNumber"), result.getString("Email"), result.getString("Language"));
             mycon.close();
         }
         catch (SQLException sql){

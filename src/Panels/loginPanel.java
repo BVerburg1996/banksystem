@@ -70,7 +70,6 @@ public class loginPanel extends JFrame {
                     }
                 }
             catch (SQLException e) {
-
             }
         });
     }

@@ -1,5 +1,6 @@
 package Panels;
 
+import accountManagment.*;
 import com.mysql.cj.protocol.Resultset;
 
 import javax.swing.*;
@@ -7,10 +8,11 @@ import javax.xml.transform.Result;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
+import java.util.ArrayList;
 
 import static Panels.loginPanel.txuser;
 
-public class overviewPanel<headers> extends JFrame {
+public class overviewPanel<headers, accounts> extends JFrame {
 
     private Font f = new Font("Arial", Font.BOLD, 18);
 
@@ -33,11 +35,13 @@ public class overviewPanel<headers> extends JFrame {
         }
     }
 
+    Account account = new Account();
+
     JLabel welcome = new JLabel("Welkom " + txuser.getText());
     JLabel overview = new JLabel("Overzicht bankaccounts");
     JButton newAccount = new JButton("Nieuw bankaccount");
     JButton newTransaction = new JButton("Transactie");
-
+    //JList accList = new JList(account.ReadBankAccount());
     JPanel panel = new JPanel();
 
     overviewPanel() {
@@ -48,17 +52,16 @@ public class overviewPanel<headers> extends JFrame {
 
         welcome.setBounds(170, 10, 160, 60);
         overview.setBounds(125, 30, 250, 60);
+        //accList.setBounds(125, 50, 250, 200);
         newAccount.setBounds(165, 400, 150, 25);
         newTransaction.setBounds(325, 400, 150, 25);
 
-
-        //@TODO
-        //foreach (account : accounts) > maak een regel
-
         panel.add(welcome);
         panel.add(overview);
+        //panel.add(accList);
         panel.add(newAccount);
         panel.add(newTransaction);
+
         welcome.setFont(f);
         overview.setFont(f);
 
@@ -70,22 +73,18 @@ public class overviewPanel<headers> extends JFrame {
     }
 
     public void setNewTransaction() {
-        newTransaction.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                transactionPanel transaction = new transactionPanel();
-                transaction.setVisible(true);
-                dispose();
-            }
+        newTransaction.addActionListener(ae -> {
+            transactionPanel transaction = new transactionPanel();
+            transaction.setVisible(true);
+            dispose();
         });
     }
 
     public void setNewAccount() {
-        newAccount.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                newbankaccountPanel newaccount = new newbankaccountPanel();
-                newaccount.setVisible(true);
-                dispose();
-            }
+        newAccount.addActionListener(ae -> {
+            newbankaccountPanel newaccount = new newbankaccountPanel();
+            newaccount.setVisible(true);
+            dispose();
         });
     }
 }

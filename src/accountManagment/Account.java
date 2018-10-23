@@ -37,7 +37,6 @@ public class Account implements IAccount {
 
     @Override
     public List<BankAccount> ReadBankAccount(int bankAccountID) {
-
         return accountDAO.readAll(bankAccountID);
     }
 

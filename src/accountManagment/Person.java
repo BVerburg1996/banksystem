@@ -20,28 +20,23 @@ public class Person implements IPerson {
     PersonDAO personDAO = new PersonDAO();
     public ArrayList<Person> persons;
 
-    public Person(String iemand, String s, String ab25258, String diederikn, String s1){
 
-    }
-
-    public Person(String firstName, String lastName, String accountNumber, String email, Date dateOfBirth, String language){
+    public Person(String firstName, String lastName, String accountNumber, String email, String language){
         persons = new ArrayList<Person>();
         this.firstName = firstName;
         this.lastName = lastName;
         this.accountNumber = accountNumber;
         this.email = email;
-        this.dateOfBirth = dateOfBirth;
         this.language = language;
     }
 
-    public Person(int ID, String firstName, String lastName, String accountNumber, String email, Date dateOfBirth, String language){
+    public Person(int ID, String firstName, String lastName, String accountNumber, String email, String language){
         persons = new ArrayList<Person>();
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.accountNumber = accountNumber;
         this.email = email;
-        this.dateOfBirth = dateOfBirth;
         this.language = language;
     }
 
@@ -65,7 +60,6 @@ public class Person implements IPerson {
                 "LastName: " + lastName + "\n" +
                 "AccountNumber: " + accountNumber + "\n" +
                 "Email: " + email + "\n" +
-                "Date: " + dateOfBirth + "\n" +
                 "language: " + language;
 
 
@@ -106,14 +100,6 @@ public class Person implements IPerson {
 
     public int getRend() {
         return rend;
-    }
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
     }
 
     public String getLanguage() {

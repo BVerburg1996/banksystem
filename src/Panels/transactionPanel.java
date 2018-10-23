@@ -1,5 +1,7 @@
 package Panels;
 
+import accountManagment.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -14,8 +16,10 @@ public class transactionPanel<headers> extends JFrame {
     }
 
     JLabel title = new JLabel("Nieuwe transactie");
-    JTextField amountInput = new JTextField("Hoeveelheid");
-    JTextField toInput = new JTextField("Naar account");
+    JLabel preAmount = new JLabel("Hoeveel wilt u overmaken?");
+    JLabel preToInput = new JLabel("Naar Rekeningnummer");
+    JTextField amountInput = new JTextField();
+    JTextField toInput = new JTextField();
     JButton submitTransaction = new JButton("Verzenden");
     JButton backToMain = new JButton("Terug");
     JPanel panel = new JPanel();
@@ -28,13 +32,17 @@ public class transactionPanel<headers> extends JFrame {
         panel.setLayout (null);
 
         title.setBounds(125,10,250,60);
-        amountInput.setBounds(100, 80, 250, 25);
-        toInput.setBounds(100,130, 250, 25);
+        preAmount.setBounds(100, 70, 250, 25);
+        amountInput.setBounds(100, 90, 250, 25);
+        preToInput.setBounds(100,120, 250, 25);
+        toInput.setBounds(100,140, 250, 25);
         submitTransaction.setBounds(140,170, 150, 25);
         backToMain.setBounds(140,220, 150, 25);
 
         panel.add(title);
+        panel.add(preAmount);
         panel.add(amountInput);
+        panel.add(preToInput);
         panel.add(toInput);
         panel.add(submitTransaction);
         panel.add(backToMain);
@@ -43,16 +51,29 @@ public class transactionPanel<headers> extends JFrame {
         getContentPane().add(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+        setTransaction();
         setBackToMain();
     }
 
+    public void setTransaction() {
+        submitTransaction.addActionListener(e -> {
+            String amount = amountInput.getText();
+            String toWho = toInput.getText();
+
+            Account Account = new Account ();
+
+            JOptionPane.showMessageDialog(null,"Uw transactie van " + amount + " naar " + toWho + " is verzonden!");
+            overviewPanel overviewPanel =new overviewPanel();
+            overviewPanel.setVisible(true);
+            dispose();
+        });
+    }
+
     public void setBackToMain(){
-        backToMain.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                overviewPanel overviewPanel =new overviewPanel();
-                overviewPanel.setVisible(true);
-                dispose();
-            }
+        backToMain.addActionListener(ae -> {
+            overviewPanel overviewPanel =new overviewPanel();
+            overviewPanel.setVisible(true);
+            dispose();
         });
     }
 

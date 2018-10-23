@@ -38,7 +38,6 @@ public class AccountDAO {
 //        return account;
 //    }
 
-
     public void CreateBankAccount(BankAccount bankAccount, String bankAccountNumber) {
 
         Connection conn;
@@ -48,7 +47,7 @@ public class AccountDAO {
             try {
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
 
-                String query1 = "SELECT ID FROM person WHERE AccountNumber = " + bankAccountNumber + ";";
+                String query1 = "SELECT ID FROM person WHERE AccountNumber = '" + bankAccountNumber + "';";
                 Statement statement1 = conn.createStatement();
                 ResultSet result = statement1.executeQuery(query1);
                 result.next();
@@ -86,7 +85,7 @@ public class AccountDAO {
 
             if (connection.openConnection()) {
 
-                ResultSet resultSet = connection.executeSQLStatement("SELECT * FROM bankaccount WHERE account_ID = " + accountID + ";");
+                ResultSet resultSet = connection.executeSQLStatement("SELECT * FROM bankaccount WHERE account_ID = '" + accountID + "';");
 
                 if (resultSet != null) {
 
