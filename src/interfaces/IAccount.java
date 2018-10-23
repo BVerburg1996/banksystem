@@ -9,7 +9,7 @@ public interface IAccount {
 
     void CreateBankAccount(BankAccount bankAccount, String accountNumber);
 
-    List<BankAccount> ReadBankAccount(int bankAccountID);
+    List<BankAccount> ReadBankAccount(String bankAccountID);
 
     void DeleteBankAccount(BankAccount bankAccount);
 

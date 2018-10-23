@@ -57,10 +57,13 @@ public class transactionPanel<headers> extends JFrame {
 
     public void setTransaction() {
         submitTransaction.addActionListener(e -> {
-            String amount = amountInput.getText();
+            Double amount = Double.valueOf(amountInput.getText());
             String toWho = toInput.getText();
 
-            Account Account = new Account ();
+            Account account = new Account ();
+            BankAccount bankAccount = new BankAccount();
+
+            account.CreateTransAction(bankAccount, amount,bankAccount, 2 , overviewPanel.currentID);
 
             JOptionPane.showMessageDialog(null,"Uw transactie van " + amount + " naar " + toWho + " is verzonden!");
             overviewPanel overviewPanel =new overviewPanel();

@@ -77,32 +77,48 @@ public class AccountDAO {
         }
     }
 
-    public List<BankAccount> readAll(int accountID) {
+    public List<BankAccount> readAll(String accountNumber) {
 
         ArrayList<BankAccount> bankAccounts = new ArrayList<>();
+        ResultSet result;
+        Statement statement;
 
-        if (accountID != 0) {
+        try {
 
-            if (connection.openConnection()) {
+            Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
 
-                ResultSet resultSet = connection.executeSQLStatement("SELECT * FROM bankaccount WHERE account_ID = '" + accountID + "';");
+            String sql = "SELECT ID FROM person WHERE AccountNumber = '" + accountNumber + "';";
+            statement = mycon.createStatement();
+            result = statement.executeQuery(sql);
+            result.next();
 
-                if (resultSet != null) {
+            int personID = result.getInt(1);
+            System.out.println("Personid > " + personID);
 
-                    try {
-                        while (resultSet.next()) {
-                            BankAccount bankAccount = new BankAccount(resultSet.getDouble("Amount"), resultSet.getString("Description"));
+            String sq2 = "SELECT ID FROM account WHERE person_ID = " + personID + ";";
+            statement = mycon.createStatement();
+            result = statement.executeQuery(sq2);
+            result.next();
 
-                            bankAccounts.add(bankAccount);
-                        }
-                    } catch (SQLException sql) {
-                        System.out.println(sql);
-                        bankAccounts = null;
-                    }
+            int accountID = result.getInt(1);
+            System.out.println("Accountid > " + accountID);
+
+            String read = "SELECT * FROM bankaccount WHERE account_ID = " + accountID + ";";
+
+            Statement statement1 = mycon.createStatement();
+            ResultSet resultSet = statement1.executeQuery(read);
+
+                while (resultSet.next()) {
+                    BankAccount bankAccount = new BankAccount(resultSet.getDouble("Amount"), resultSet.getString("Description"));
+
+                    bankAccounts.add(bankAccount);
+                    System.out.println(bankAccounts);
                 }
-            }
-            connection.closeConnection();
+        } catch (SQLException sql) {
+            System.out.println(sql);
+            bankAccounts = null;
         }
+
         return bankAccounts;
     }
 

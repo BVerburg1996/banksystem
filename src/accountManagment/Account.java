@@ -36,7 +36,7 @@ public class Account implements IAccount {
     }
 
     @Override
-    public List<BankAccount> ReadBankAccount(int bankAccountID) {
+    public List<BankAccount> ReadBankAccount(String bankAccountID) {
         return accountDAO.readAll(bankAccountID);
     }
 
@@ -45,7 +45,6 @@ public class Account implements IAccount {
         accountDAO.Delete(bankAccount);
     }
 
-    @Override
     public void CreateTransAction(BankAccount bankAccount, double amount, BankAccount bankAccount2, int accountDeposit, int accountWithdraw){
         accountDAO.Deposit(bankAccount, amount, accountDeposit);
 

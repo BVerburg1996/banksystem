@@ -1,21 +1,17 @@
 package Panels;
 
 import accountManagment.*;
-import com.mysql.cj.protocol.Resultset;
 
 import javax.swing.*;
-import javax.xml.transform.Result;
 import java.awt.*;
-import java.awt.event.*;
 import java.sql.*;
-import java.util.ArrayList;
 
 import static Panels.loginPanel.txuser;
 
 public class overviewPanel<headers, accounts> extends JFrame {
 
     private Font f = new Font("Arial", Font.BOLD, 18);
-
+    static int currentID;
 
     public static void main(String[] args) {
         overviewPanel frameTabel = new overviewPanel();
@@ -28,8 +24,9 @@ public class overviewPanel<headers, accounts> extends JFrame {
             mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
             String sql = ("SELECT * FROM person WHERE UserName=`" + txuser.getText() + "`");
             Statement statement = mycon.createStatement();
-            ResultSet login = statement.executeQuery(sql);
-            login.next();
+            ResultSet overview = statement.executeQuery(sql);
+            overview.next();
+            int currentID = overview.getInt("ID");
 
         } catch (SQLException e) {
         }
@@ -41,7 +38,7 @@ public class overviewPanel<headers, accounts> extends JFrame {
     JLabel overview = new JLabel("Overzicht bankaccounts");
     JButton newAccount = new JButton("Nieuw bankaccount");
     JButton newTransaction = new JButton("Transactie");
-    //JList accList = new JList(account.ReadBankAccount());
+    JList<Object> accList = new JList<>(account.ReadBankAccount("ingb123").toArray());
     JPanel panel = new JPanel();
 
     overviewPanel() {
@@ -52,13 +49,13 @@ public class overviewPanel<headers, accounts> extends JFrame {
 
         welcome.setBounds(170, 10, 160, 60);
         overview.setBounds(125, 30, 250, 60);
-        //accList.setBounds(125, 50, 250, 200);
+        accList.setBounds(50, 80, 400, 200);
         newAccount.setBounds(165, 400, 150, 25);
         newTransaction.setBounds(325, 400, 150, 25);
 
         panel.add(welcome);
         panel.add(overview);
-        //panel.add(accList);
+        panel.add(accList);
         panel.add(newAccount);
         panel.add(newTransaction);
 
