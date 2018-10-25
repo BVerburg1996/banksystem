@@ -1,15 +1,7 @@
 package Panels;
 
 import accountManagment.Account;
-import accountManagment.BankAccount;
-import accountManagment.Person;
-import database.AccountDAO;
-import database.PersonDAO;
-
 import javax.swing.*;
-import java.awt.*;
-import java.sql.*;
-
 
 public class depositPanel<headers> extends JFrame {
 
@@ -79,9 +71,9 @@ public class depositPanel<headers> extends JFrame {
 
             //Amount cant be negative, accountID and description can't be empty
             if(amount > 0.0 && accountID != 0 && !descriptionTo.equals("")) {
-                //Create new accountDAO and execute the deposit
-                AccountDAO accountDAO = new AccountDAO();
-                accountDAO.Deposit(descriptionFrom, amount, descriptionTo, accountID);
+                //Create new account and execute the deposit
+                Account account = new Account();
+                account.Deposit(descriptionFrom, amount, descriptionTo, accountID);
 
                 //Show confirmation, create new overview panel and dispose the deposit panel
                 JOptionPane.showMessageDialog(null, "Uw bedrag van " + amount + " is overgestort van " + descriptionFrom + " naar " + descriptionTo);

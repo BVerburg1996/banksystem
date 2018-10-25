@@ -1,6 +1,5 @@
-package database;
+package databaseAccessObjects;
 
-import accountManagment.Account;
 import accountManagment.BankAccount;
 import accountManagment.Person;
 import interfaces.IAccount;
@@ -25,10 +24,10 @@ public class AccountDAO implements IAccount {
         if (bankAccount != null && bankAccountNumber != null) {
 
             try {
-                //Makes connect with the database
+                //Makes connect with the databaseAccessObjects
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
 
-                //Query to get the ID from the person in the database using the bankaccount number
+                //Query to get the ID from the person in the databaseAccessObjects using the bankaccount number
                 String getIDFromPersonQuery = "SELECT ID FROM person WHERE AccountNumber = " + bankAccountNumber + ";";
                 //Creates statement
                 statement = connection.createStatement();
@@ -80,10 +79,10 @@ public class AccountDAO implements IAccount {
         ArrayList<BankAccount> bankAccounts = new ArrayList<>();
         try {
 
-            //Makes connection with the database
+            //Makes connection with the databaseAccessObjects
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
 
-            //Query to get ID of person out of the database using his accountnumber
+            //Query to get ID of person out of the databaseAccessObjects using his accountnumber
             String getIDFromQuery = "SELECT ID FROM person WHERE AccountNumber = '" + accountNumber + "';";
             //Creates statement
             statement = connection.createStatement();

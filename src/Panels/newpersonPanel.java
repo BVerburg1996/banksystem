@@ -4,7 +4,6 @@ import accountManagment.Account;
 import accountManagment.Person;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 public class newpersonPanel<headers> extends JFrame {
@@ -110,7 +109,7 @@ public class newpersonPanel<headers> extends JFrame {
                 //Create the new account
                 Account account = new Account(uname, pwrd);
 
-                //...And submit them to the database
+                //...And submit them to the databaseAccessObjects
                 person.CreateAccount(person, account);
 
                 //Show confirmation and redirect to login panel

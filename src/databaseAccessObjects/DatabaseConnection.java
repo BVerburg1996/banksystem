@@ -1,4 +1,4 @@
-package database;
+package databaseAccessObjects;
 
 import java.sql.*;
 
@@ -78,7 +78,7 @@ public class DatabaseConnection {
         ResultSet resultset = null;
 
         // First, check whether a some query was passed and the connection with
-        // the database.
+        // the databaseAccessObjects.
         if (query != null && connectionIsOpen()) {
             // Then, if succeeded, execute the query.
             try {
@@ -96,7 +96,7 @@ public class DatabaseConnection {
         boolean result = false;
 
         // First, check whether a some query was passed and the connection with
-        // the database.
+        // the databaseAccessObjects.
         if (query != null && connectionIsOpen()) {
             // Then, if succeeded, execute the query.
             try {

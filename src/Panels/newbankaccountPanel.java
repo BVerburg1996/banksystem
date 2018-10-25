@@ -4,7 +4,6 @@ import accountManagment.Account;
 import accountManagment.BankAccount;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class newbankaccountPanel<headers> extends JFrame {
 

@@ -2,7 +2,6 @@ package Panels;
 
 import java.sql.*;
 import javax.swing.*;
-import java.awt.event.*;
 
 public class loginPanel extends JFrame {
 
@@ -100,7 +99,7 @@ public class loginPanel extends JFrame {
                         txuser.requestFocus();
                     }
             }
-            //If there is an SQL Exception, it means that the username given by the user is not in the database
+            //If there is an SQL Exception, it means that the username given by the user is not in the databaseAccessObjects
             catch (SQLException e) {
                 JOptionPane.showMessageDialog(null,"Uw gebruikersnaam is niet bij ons bekend");
                 txuser.setText("");

@@ -1,9 +1,6 @@
 package Panels;
 
 import accountManagment.*;
-import database.AccountDAO;
-import database.PersonDAO;
-
 import javax.swing.*;
 
 public class transactionPanel<headers> extends JFrame {
@@ -68,20 +65,20 @@ public class transactionPanel<headers> extends JFrame {
             toWho = toInput.getText();
 
             if(amount > 0.0 && amount != 0 && !toWho.equals("")) {
-                //Create new personDAO
-                PersonDAO personDAO = new PersonDAO();
+                //Create new person
+                Person person = new Person();
 
                 //Create new person, and set it to the person who will receive the money
                 Person personTo = new Person();
-                personTo = personDAO.read(toWho);
+                personTo = person.Read(toWho);
 
                 //Create new person, and set it to the person who will submit the money
                 Person personFrom = new Person();
-                personFrom = personDAO.read(loginPanel.accountNumber);
+                personFrom = person.Read(loginPanel.accountNumber);
 
-                //Create new AccountDAO, and fire the createtransaction method
-                AccountDAO accountDAO = new AccountDAO();
-                accountDAO.CreateTransAction(personFrom, amount, personTo);
+                //Create new Account, and fire the createtransaction method
+                Account account = new Account();
+                account.CreateTransAction(personFrom, amount, personTo);
 
                 //Show confirmation, and redirects back to overview panel
                 JOptionPane.showMessageDialog(null, "Uw transactie van " + amount + " naar " + toWho + " is verzonden!");

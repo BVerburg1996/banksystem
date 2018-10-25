@@ -1,11 +1,10 @@
 package accountManagment;
 
-import database.AccountDAO;
+import databaseAccessObjects.AccountDAO;
 import interfaces.IAccount;
 
 import java.util.ArrayList;
 import java.util.Currency;
-import java.util.List;
 
 public class Account implements IAccount {
 

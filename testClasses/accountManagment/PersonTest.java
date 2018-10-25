@@ -1,10 +1,7 @@
 package accountManagment;
 
-import database.PersonDAO;
-import interfaces.IPerson;
+import databaseAccessObjects.PersonDAO;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,11 +1,9 @@
 package accountManagment;
 
-import database.PersonDAO;
+import databaseAccessObjects.PersonDAO;
 import interfaces.IPerson;
 
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.SortedMap;
 
 public class Person implements IPerson {
 

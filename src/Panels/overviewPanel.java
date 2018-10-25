@@ -1,11 +1,9 @@
 package Panels;
 
 import accountManagment.*;
-import database.PersonDAO;
 
 import javax.swing.*;
 import java.awt.*;
-import java.sql.*;
 
 import static Panels.loginPanel.txuser;
 

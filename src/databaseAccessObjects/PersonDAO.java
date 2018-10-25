@@ -1,4 +1,4 @@
-package database;
+package databaseAccessObjects;
 
 import accountManagment.Account;
 import accountManagment.Person;

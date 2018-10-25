@@ -1,7 +1,6 @@
 package accountManagment;
 
-import database.AccountDAO;
-import interfaces.IAccount;
+import databaseAccessObjects.AccountDAO;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
