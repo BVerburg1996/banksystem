@@ -2,6 +2,7 @@ package interfaces;
 
 import accountManagment.Account;
 import accountManagment.BankAccount;
+import accountManagment.Person;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ public interface IAccount {
 
     void DeleteBankAccount(BankAccount bankAccount);
 
-    void CreateTransAction(BankAccount bankAccount, double amount, BankAccount bankAccount2, int accountDeposit, int accountWithdraw);
+    void CreateTransAction(Person person1, double amount, Person person2);
 
-
+    void Deposit(String from, double amount, String to, int accountID);
 }

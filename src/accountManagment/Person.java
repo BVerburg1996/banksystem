@@ -14,12 +14,13 @@ public class Person implements IPerson {
     private String lastName;
     private String accountNumber;
     private String email;
-    private final int rend = 1;
-    private Date dateOfBirth;
     private String language;
     PersonDAO personDAO = new PersonDAO();
     public ArrayList<Person> persons;
 
+    public Person(){
+
+    }
 
     public Person(String firstName, String lastName, String accountNumber, String email, String language){
         persons = new ArrayList<Person>();
@@ -30,7 +31,7 @@ public class Person implements IPerson {
         this.language = language;
     }
 
-    public Person(int ID, String firstName, String lastName, String accountNumber, String email, String language){
+    public Person(int ID,String firstName, String lastName, String accountNumber, String email, String language){
         persons = new ArrayList<Person>();
         this.ID = ID;
         this.firstName = firstName;
@@ -39,8 +40,6 @@ public class Person implements IPerson {
         this.email = email;
         this.language = language;
     }
-
-
 
     @Override
     public void CreateAccount(Person person, Account account) {
@@ -98,10 +97,6 @@ public class Person implements IPerson {
         this.email = email;
     }
 
-    public int getRend() {
-        return rend;
-    }
-
     public String getLanguage() {
         return language;
     }
@@ -113,4 +108,5 @@ public class Person implements IPerson {
     public int getID() {
         return ID;
     }
+
 }

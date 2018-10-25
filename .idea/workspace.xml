@@ -2,15 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51ce1274-dc61-4e55-bb1c-4f119573db6c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/b_nk.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Panels/depositPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b$nk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/b$nk.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/loginPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/newbankaccountPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/newbankaccountPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/newpersonPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/overviewPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/overviewPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/transactionPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/Panels/transactionPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/Panels/transactionPanel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/b$nk/accountManagment/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/accountManagment/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/accountManagment/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/accountManagment/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/database/AccountDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/database/AccountDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/database/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/database/PersonDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/b$nk/interfaces/IAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/b$nk/interfaces/IAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/loginPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/loginPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/newpersonPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/newpersonPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/overviewPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/overviewPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/transactionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/transactionPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/accountManagment/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountManagment/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/accountManagment/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountManagment/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/accountManagment/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/accountManagment/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/AccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/PersonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaces/IAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/IAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testClasses/accountManagment/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/testClasses/accountManagment/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testClasses/accountManagment/BankAccountTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testClasses/accountManagment/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/testClasses/accountManagment/PersonTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,25 +86,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="8199" />
-          <entry key="txt" value="43" />
+          <entry key="java" value="17245" />
+          <entry key="txt" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8198" />
-          <entry key="PLAIN_TEXT" value="50" />
+          <entry key="JAVA" value="17244" />
+          <entry key="PLAIN_TEXT" value="81" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="46" />
+          <entry key="java" value="76" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="46" />
+          <entry key="JAVA" value="76" />
         </counts>
       </usages-collector>
     </session>
@@ -93,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Panels/loginPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+            <state relative-caret-position="190">
+              <caret line="105" selection-start-line="105" selection-end-line="107" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#169#170#0" expanded="true" />
@@ -107,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Panels/newpersonPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+            <state relative-caret-position="500">
+              <caret line="128" column="40" lean-forward="true" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,11 +137,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/database/AccountDAO.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Panels/depositPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="105" column="92" lean-forward="true" selection-start-line="105" selection-start-column="92" selection-end-line="105" selection-end-column="92" />
+            <state relative-caret-position="347">
+              <caret line="93" selection-start-line="93" selection-end-line="97" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Panels/newbankaccountPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,44 +161,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Panels/overviewPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="40" column="86" lean-forward="true" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
+            <state relative-caret-position="265">
+              <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#436#437#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/accountManagment/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-              <folding>
-                <element signature="e#989#990#0" expanded="true" />
-                <element signature="e#1045#1046#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/interfaces/IAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="60" lean-forward="true" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Panels/transactionPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="65" column="69" lean-forward="true" selection-start-line="65" selection-start-column="69" selection-end-line="65" selection-end-column="69" />
+            <state relative-caret-position="353">
+              <caret line="64" column="80" selection-start-line="64" selection-start-column="80" selection-end-line="64" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,10 +183,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/PersonDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/database/AccountDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="33" column="113" lean-forward="true" selection-start-line="33" selection-start-column="113" selection-end-line="33" selection-end-column="113" />
+            <state relative-caret-position="37">
+              <caret line="71" column="68" lean-forward="true" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2926#2927#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,17 +198,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/accountManagment/BankAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/BankAccountDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/database/PersonDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="275">
+              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testClasses/accountManagment/AccountTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -214,22 +236,46 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addtab</find>
-      <find>actionlogin</find>
-      <find>regface</find>
-      <find>addActionListener</find>
-      <find>actionlis</find>
-      <find>newframe</find>
-      <find>transaction</find>
       <find>drivermana</find>
+      <find>Personid</find>
+      <find>System.out.</find>
+      <find>currentID</find>
+      <find>FROM person</find>
+      <find>prepared</find>
+      <find>accountID</find>
+      <find>System</find>
+      <find>accountid</find>
       <find>readall</find>
+      <find>Amount</find>
+      <find>getString('Account')</find>
+      <find>account</find>
+      <find>exception</find>
+      <find>amount</find>
       <find>readbank</find>
+      <find>dep</find>
+      <find>deposit</find>
+      <find>transaction</find>
+      <find>system</find>
+      <find>out</find>
+      <find>bankaccount</find>
+      <find>delete</find>
+      <find>createState</find>
+      <find>readAll</find>
+      <find>read</find>
+      <find>ReadBankAccount</find>
+      <find>bank.bank</find>
+      <find>main</find>
+      <find>create</find>
     </findStrings>
     <replaceStrings>
       <replace>newaccount</replace>
       <replace>personalData</replace>
       <replace>overview</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>S:\b$nk\src</dir>
+      <dir>S:\b$nk</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -251,16 +297,21 @@
         <option value="$PROJECT_DIR$/src/loginPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/dataPanel.java" />
         <option value="$PROJECT_DIR$/src/accountManagment/Person.java" />
-        <option value="$PROJECT_DIR$/src/accountManagment/BankAccount.java" />
-        <option value="$PROJECT_DIR$/src/database/PersonDAO.java" />
-        <option value="$PROJECT_DIR$/src/Panels/newpersonPanel.java" />
-        <option value="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" />
-        <option value="$PROJECT_DIR$/src/Panels/transactionPanel.java" />
-        <option value="$PROJECT_DIR$/src/Panels/loginPanel.java" />
-        <option value="$PROJECT_DIR$/src/accountManagment/Account.java" />
+        <option value="$PROJECT_DIR$/testClasses/accountManagment/BankAccountTest.java" />
+        <option value="$PROJECT_DIR$/testClasses/accountManagment/PersonTest.java" />
+        <option value="$PROJECT_DIR$/src/database/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/interfaces/IAccount.java" />
+        <option value="$PROJECT_DIR$/src/Panels/loginPanel.java" />
         <option value="$PROJECT_DIR$/src/Panels/overviewPanel.java" />
         <option value="$PROJECT_DIR$/src/database/AccountDAO.java" />
+        <option value="$PROJECT_DIR$/src/accountManagment/Account.java" />
+        <option value="$PROJECT_DIR$/src/accountManagment/BankAccount.java" />
+        <option value="$PROJECT_DIR$/testClasses/accountManagment/AccountTest.java" />
+        <option value="$PROJECT_DIR$/src/Panels/newbankaccountPanel.java" />
+        <option value="$PROJECT_DIR$/src/Panels/depositPanel.java" />
+        <option value="$PROJECT_DIR$/src/Panels/newpersonPanel.java" />
+        <option value="$PROJECT_DIR$/src/database/PersonDAO.java" />
+        <option value="$PROJECT_DIR$/src/Panels/transactionPanel.java" />
       </list>
     </option>
   </component>
@@ -341,6 +392,23 @@
             </path>
             <path>
               <item name="b$nk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="b$nk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paymentCurrency" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="b$nk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="b$nk" type="462c0819:PsiDirectoryNode" />
+              <item name="testClasses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="b$nk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="b$nk" type="462c0819:PsiDirectoryNode" />
+              <item name="testClasses" type="462c0819:PsiDirectoryNode" />
+              <item name="accountManagment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="b$nk" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -351,15 +419,23 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540334988527" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540463566555" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/MySQL/mysql-connector-java-8.0.12" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Panels" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -373,7 +449,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.new jpanel">
+  <component name="RunManager" selected="Application.b$nk">
     <configuration name="Table" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Table" />
       <module name="b$nk" />
@@ -381,12 +457,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="b$nk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountManagment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="accountManagment" />
+      <option name="MAIN_CLASS_NAME" value="accountManagment.AccountTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="b$nk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="accountManagment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="accountManagment" />
+      <option name="MAIN_CLASS_NAME" value="accountManagment.PersonTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.new jpanel" />
       <item itemvalue="Application.Table" />
+      <item itemvalue="JUnit.PersonTest" />
+      <item itemvalue="JUnit.AccountTest" />
+      <item itemvalue="Application.b$nk" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest" />
+        <item itemvalue="JUnit.PersonTest" />
         <item itemvalue="Application.Table" />
       </list>
     </recent_temporary>
@@ -406,7 +515,7 @@
       <workItem from="1539889146297" duration="925000" />
       <workItem from="1539890360334" duration="193000" />
       <workItem from="1540122976346" duration="5771000" />
-      <workItem from="1540162793567" duration="34577000" />
+      <workItem from="1540162793567" duration="61215000" />
     </task>
     <task id="LOCAL-00001" summary="Removed a &quot;: &quot;">
       <created>1540241383770</created>
@@ -422,14 +531,53 @@
       <option name="project" value="LOCAL" />
       <updated>1540241964629</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Some changes in the code">
+      <created>1540335069694</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1540335069694</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="PersonTest - 2018.10.24 at 23h 00m 08s.xml">
+      <configuration name="PersonTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PersonTest - 2018.10.24 at 23h 01m 02s.xml">
+      <configuration name="PersonTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2018.10.25 at 00h 00m 38s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2018.10.25 at 00h 01m 23s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2018.10.25 at 00h 02m 31s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2018.10.25 at 02h 35m 36s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2018.10.25 at 02h 37m 06s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2018.10.25 at 02h 37m 54s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2018.10.25 at 02h 52m 33s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2018.10.25 at 02h 59m 13s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49677000" />
+    <option name="totallyTimeSpent" value="76315000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18443497" />
@@ -463,6 +611,38 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="TMC Project List" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18443497" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35032538" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TMC Test Results" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="TMC Project List" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -473,7 +653,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed a &quot;: &quot;" />
     <MESSAGE value="Added Diederik's work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Diederik's work" />
+    <MESSAGE value="Some changes in the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes in the code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/f.java" />
@@ -490,13 +671,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Table.java" />
-    <entry file="file://$PROJECT_DIR$/testClasses/accountManagment/AccountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/interfaces/IPerson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -539,34 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-758">
-          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/accountManagment/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/paymentCurrency/Currency.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="15" column="79" lean-forward="true" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/newbankaccountPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -577,46 +727,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/loginPanel.java">
+    <entry file="file://$PROJECT_DIR$/testClasses/accountManagment/BankAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#169#170#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/PersonDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="113" lean-forward="true" selection-start-line="33" selection-start-column="113" selection-end-line="33" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/accountManagment/BankAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/newpersonPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+        <state relative-caret-position="170">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/transactionPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/database/DatabaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="65" column="69" lean-forward="true" selection-start-line="65" selection-start-column="69" selection-end-line="65" selection-end-column="69" />
+        <state relative-caret-position="190">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accountManagment/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+            <element signature="e#1826#1827#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#1982#1983#0" expanded="true" />
+            <element signature="e#2022#2023#0" expanded="true" />
+            <element signature="e#2062#2063#0" expanded="true" />
+            <element signature="e#2098#2099#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="e#2308#2309#0" expanded="true" />
+            <element signature="e#2342#2343#0" expanded="true" />
+            <element signature="e#2377#2378#0" expanded="true" />
+            <element signature="e#2408#2409#0" expanded="true" />
+            <element signature="e#2456#2457#0" expanded="true" />
+            <element signature="e#2496#2497#0" expanded="true" />
+            <element signature="e#2522#2523#0" expanded="true" />
+            <element signature="e#2547#2548#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/interfaces/IAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="71" lean-forward="true" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testClasses/accountManagment/PersonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -625,38 +794,103 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/accountManagment/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="179">
+          <caret line="37" column="49" lean-forward="true" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
           <folding>
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/IAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="60" lean-forward="true" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Panels/overviewPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="40" column="86" lean-forward="true" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/AccountDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="105" column="92" lean-forward="true" selection-start-line="105" selection-start-column="92" selection-end-line="105" selection-end-column="92" />
+        <state relative-caret-position="37">
+          <caret line="71" column="68" lean-forward="true" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2926#2927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accountManagment/BankAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testClasses/accountManagment/AccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/loginPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="105" selection-start-line="105" selection-end-line="107" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/newbankaccountPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/newpersonPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="128" column="40" lean-forward="true" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/PersonDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/overviewPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/depositPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="93" selection-start-line="93" selection-end-line="97" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels/transactionPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="64" column="80" selection-start-line="64" selection-start-column="80" selection-end-line="64" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

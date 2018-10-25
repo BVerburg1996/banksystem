@@ -11,7 +11,7 @@ public class BankAccount {
 
     }
 
-    public BankAccount(double amount, String description) {
+    public BankAccount(double amount, String description){
         this.amount = amount;
         this.description = description;
     }

@@ -3,73 +3,64 @@ package database;
 import accountManagment.Account;
 import accountManagment.BankAccount;
 import accountManagment.Person;
+import interfaces.IAccount;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AccountDAO {
+public class AccountDAO implements IAccount {
 
-    DatabaseConnection connection = new DatabaseConnection();
+    //Declarations
+    Connection connection;
+    Statement statement;
+    PreparedStatement preparedStatement;
+    ResultSet resultSet;
 
-//    public Account read(int personID) {
-//
-//        Account account = null;
-//
-//        if (personID != 0) {
-//
-//            if (connection.openConnection()) {
-//
-//                ResultSet resultSet = connection.executeSQLStatement("SELECT * FROM account WHERE person_ID = " + personID + ";");
-//
-//                if (resultSet != null) {
-//
-//                    try {
-//                        account = new Account(resultSet.getString("UserName"), resultSet.getString("PassWord"));
-//                    } catch (SQLException sql) {
-//                        System.out.println(sql);
-//
-//                        account = null;
-//                    }
-//                }
-//            }
-//            connection.closeConnection();
-//        }
-//        return account;
-//    }
-
+    @Override
+    //Creates an bank account
     public void CreateBankAccount(BankAccount bankAccount, String bankAccountNumber) {
 
-        Connection conn;
-
-        if (bankAccount != null) {
+        //Checks if bankaccount is not null and account number is not null
+        if (bankAccount != null && bankAccountNumber != null) {
 
             try {
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
+                //Makes connect with the database
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
 
-                String query1 = "SELECT ID FROM person WHERE AccountNumber = '" + bankAccountNumber + "';";
-                Statement statement1 = conn.createStatement();
-                ResultSet result = statement1.executeQuery(query1);
-                result.next();
-                int number = result.getInt(1);
+                //Query to get the ID from the person in the database using the bankaccount number
+                String getIDFromPersonQuery = "SELECT ID FROM person WHERE AccountNumber = " + bankAccountNumber + ";";
+                //Creates statement
+                statement = connection.createStatement();
+                //Executes query
+                resultSet = statement.executeQuery(getIDFromPersonQuery);
+                //Gets the ID of the person and puts it in a variable
+                resultSet.next();
+                int personID = resultSet.getInt(1);
 
-                String query2 = "SELECT ID FROM account WHERE person_ID = " + number + ";";
-                Statement statement2 = conn.createStatement();
-                ResultSet result2 = statement2.executeQuery(query2);
-                result2.next();
-                int accountNumber = result2.getInt(1);
+                //Query to get the ID of the account using the personid
+                String getIDFROMAccountQuery = "SELECT ID FROM account WHERE person_ID = " + personID + ";";
+                //Creates statement
+                statement = connection.createStatement();
+                //Executes query
+                resultSet = statement.executeQuery(getIDFROMAccountQuery);
+                //Gets the id of the account and puts it in a variable
+                resultSet.next();
+                int accountNumber = resultSet.getInt(1);
 
-                String sql = "INSERT INTO bankaccount (Amount, Description, account_ID) VALUES(?, ?, ?)";
+                //Query to create a bank account
+                String createBankAccountQuery = "INSERT INTO bankaccount (Amount, Description, account_ID) VALUES(?, ?, ?)";
 
-                PreparedStatement statement = conn.prepareStatement(sql);
+                //PreparedStatemen, Sets values to make an bank account
+                preparedStatement = connection.prepareStatement(createBankAccountQuery);
+                preparedStatement.setDouble(1, bankAccount.getAmount());
+                preparedStatement.setString(2, bankAccount.getDescription());
+                preparedStatement.setInt(3, accountNumber);
 
-                statement.setDouble(1, bankAccount.getAmount());
-                statement.setString(2, bankAccount.getDescription());
-                statement.setInt(3, accountNumber);
-
-                statement.executeUpdate();
-
-                conn.close();
+                //Executes update
+                preparedStatement.executeUpdate();
+                //Closes connection
+                connection.close();
             } catch (SQLException sqlex) {
                 System.out.println(sqlex);
             }
@@ -77,148 +68,199 @@ public class AccountDAO {
         }
     }
 
-    public List<BankAccount> readAll(String accountNumber) {
+    @Override
+    public List<BankAccount> ReadBankAccount(String bankAccountID) {
+        return null;
+    }
 
+    //Returns a list of bankaccounts the user has using his accountnumber
+    public ArrayList<BankAccount> ReadAll(String accountNumber) {
+
+        //ArrayList of bankaccounts
         ArrayList<BankAccount> bankAccounts = new ArrayList<>();
-        ResultSet result;
-        Statement statement;
-
         try {
 
-            Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
+            //Makes connection with the database
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
 
-            String sql = "SELECT ID FROM person WHERE AccountNumber = '" + accountNumber + "';";
-            statement = mycon.createStatement();
-            result = statement.executeQuery(sql);
-            result.next();
+            //Query to get ID of person out of the database using his accountnumber
+            String getIDFromQuery = "SELECT ID FROM person WHERE AccountNumber = '" + accountNumber + "';";
+            //Creates statement
+            statement = connection.createStatement();
+            //Executes statement
+            resultSet = statement.executeQuery(getIDFromQuery);
+            //Gets the ID of the person and puts in in a variable
+            resultSet.next();
+            int personID = resultSet.getInt(1);
 
-            int personID = result.getInt(1);
-            System.out.println("Personid > " + personID);
+            //Query to get ID from account using the personid
+            String getIDFromAccountQuery = "SELECT ID FROM account WHERE person_ID = " + personID + ";";
+            //Creates statement
+            statement = connection.createStatement();
+            //Executes query
+            resultSet = statement.executeQuery(getIDFromAccountQuery);
 
-            String sq2 = "SELECT ID FROM account WHERE person_ID = " + personID + ";";
-            statement = mycon.createStatement();
-            result = statement.executeQuery(sq2);
-            result.next();
+            //Gets the ID of the account and puts it in a variable
+            resultSet.next();
+            int accountID = resultSet.getInt("ID");
 
-            int accountID = result.getInt(1);
-            System.out.println("Accountid > " + accountID);
+            //Query to get all the bankaccounts where the account_ID is equal to your account id
+            String getAllBankAccountsQuery = "SELECT * FROM bankaccount WHERE account_ID = " + accountID + ";";
 
-            String read = "SELECT * FROM bankaccount WHERE account_ID = " + accountID + ";";
+            //Creates statement
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(getAllBankAccountsQuery);
 
-            Statement statement1 = mycon.createStatement();
-            ResultSet resultSet = statement1.executeQuery(read);
 
+            if (resultSet != null) {
                 while (resultSet.next()) {
                     BankAccount bankAccount = new BankAccount(resultSet.getDouble("Amount"), resultSet.getString("Description"));
 
                     bankAccounts.add(bankAccount);
-                    System.out.println(bankAccounts);
                 }
+            }
+            connection.close();
         } catch (SQLException sql) {
             System.out.println(sql);
             bankAccounts = null;
         }
 
+
         return bankAccounts;
     }
 
-    public void Delete(BankAccount bankAccount) {
-
+    @Override
+    public void DeleteBankAccount(BankAccount bankAccount) {
         if (bankAccount != null) {
 
-            if (connection.openConnection()) {
-
-                try {
-                    connection.executeSqlDmlStatement("DELETE FROM bankaccount WHERE Description = '" + bankAccount.getDescription() + "' AND Amount = " + bankAccount.getAmount() + ";");
-                } catch (Exception ex) {
-                    System.out.println(ex);
-                }
-            }
-            connection.closeConnection();
-        }
-    }
-
-    public void Deposit(BankAccount bankAccount, double amountToDeposit, int accountID) {
-
-        Connection conn;
-
-        double amountDeposit;
-        double amountWithDraw;
-        if (bankAccount != null && amountToDeposit != 0) {
-
             try {
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
 
-                amountDeposit = bankAccount.getAmount() - amountToDeposit;
+                String deletequery = "DELETE FROM bankaccount WHERE Description = '" + bankAccount.getDescription() + "' AND Amount = " + bankAccount.getAmount() + ";";
+                statement = connection.createStatement();
+                statement.executeUpdate(deletequery);
 
-                String query1 = "UPDATE bankaccount SET Amount=? WHERE Description = '" + bankAccount.getDescription() + "' AND account_ID = " + accountID + ";";
-
-                PreparedStatement statement1 = conn.prepareStatement(query1);
-                statement1.setDouble(1, amountDeposit);
-
-                statement1.executeUpdate();
-
-            } catch (SQLException sqlex) {
-                System.out.println(sqlex);
+            } catch (Exception ex) {
+                System.out.println(ex);
             }
         }
     }
 
+    public void CreateTransAction(Person person1, double amount, Person person2) {
 
-    public void WithDraw(BankAccount bankAccount, double amount, int accountID) {
+        double depositedAmount;
+        double amountToWithdraw;
 
-        Person person = null;
-        double amountToWithDraw;
-        double currency = 100;
-        Connection conn;
-
-        if (bankAccount != null && amount != 0) {
-
+        if (person1 != null && person2 != null && amount != 0) {
             try {
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
 
-                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
+                String getDepositAccountIDQuery = "SELECT ID FROM account WHERE person_ID = " + person1.getID() + ";";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(getDepositAccountIDQuery);
+                resultSet.next();
+                int depositAccountID = resultSet.getInt(1);
 
-                String query1 = "SELECT person_ID FROM account WHERE ID = " + accountID + ";";
-                Statement statement = conn.createStatement();
-                ResultSet result = statement.executeQuery(query1);
-                result.next();
-                int personid = result.getInt(1);
+                String getDepositBankAccountQuery = "SELECT * FROM bankaccount WHERE account_ID = " + depositAccountID + " AND Description = 'main';";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(getDepositBankAccountQuery);
+                resultSet.next();
 
-                String query2 = "SELECT Language FROM person WHERE ID = " + personid + ";";
-                Statement statement2 = conn.createStatement();
-                ResultSet result2 = statement2.executeQuery(query2);
-                result2.next();
-                String language = result2.getString(1);
+                BankAccount depositBankAccount = new BankAccount(resultSet.getDouble("Amount"), resultSet.getString("Description"));
 
-                String query3 = "SELECT Value FROM currency WHERE Language = '" + language + "';";
-                Statement statement3 = conn.createStatement();
-                ResultSet result3 = statement3.executeQuery(query3);
-                result3.next();
-                int value = result3.getInt(1);
+                String getWithdrawAccountIDQuery = "SELECT ID FROM Account WHERE person_ID = " + person2.getID() + ";";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(getWithdrawAccountIDQuery);
+                resultSet.next();
 
+                int withDrawAccountID = resultSet.getInt(1);
 
-                if (value != 0) {
+                String getWithDrawBankAccountQuery = "SELECT * FROM bankaccount WHERE account_ID = " + withDrawAccountID + " AND Description = 'main';";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(getWithDrawBankAccountQuery);
+                resultSet.next();
+                BankAccount withdrawBankAccount = new BankAccount(resultSet.getDouble("Amount"), resultSet.getString("Description"));
 
-                    if (value > 0) {
-                        currency += value;
-                    } else {
-                        currency -= value;
-                    }
+                depositedAmount = depositBankAccount.getAmount() - amount;
+                String updateDepositBankAccount = "UPDATE bankaccount SET Amount=? WHERE account_ID = " + depositAccountID + " AND Description = 'main';";
 
+                preparedStatement = connection.prepareStatement(updateDepositBankAccount);
+                preparedStatement.setDouble(1, depositedAmount);
+                preparedStatement.executeUpdate();
 
+                String updateWithdrawBankAccount = "UPDATE bankaccount SET Amount=? WHERE account_ID = " + withDrawAccountID + " AND Description = 'main';";
+
+                if (person1.getLanguage().equals(person2.getLanguage())) {
+
+                    amountToWithdraw = withdrawBankAccount.getAmount() + amount;
+
+                    preparedStatement = connection.prepareStatement(updateWithdrawBankAccount);
+                    preparedStatement.setDouble(1, amountToWithdraw);
+                    preparedStatement.executeUpdate();
+                } else {
+
+                    String getCurrencyValue = "SELECT Value FROM currency WHERE Language = '" + person2.getLanguage() + "';";
+                    statement = connection.createStatement();
+                    resultSet = statement.executeQuery(getCurrencyValue);
+                    resultSet.next();
+                    double currencyValue = resultSet.getDouble(1);
+
+                    amount = amount * currencyValue;
+
+                    amountToWithdraw = withdrawBankAccount.getAmount() + amount;
+
+                    preparedStatement = connection.prepareStatement(updateWithdrawBankAccount);
+                    preparedStatement.setDouble(1, amountToWithdraw);
+                    preparedStatement.executeUpdate();
+
+                    connection.close();
                 }
-
-                amountToWithDraw = amount / 100 * currency;
-
-                String query = "UPDATE bankaccount SET amount=? WHERE Description = " + bankAccount.getDescription() + "AND account_ID = " + bankAccount.getDescription() + ";";
-
-                PreparedStatement statement1 = conn.prepareStatement(query);
-                statement1.setDouble(2, amountToWithDraw);
-
-                statement1.executeUpdate();
             } catch (SQLException ex) {
                 System.out.println(ex);
             }
+
+        }
+    }
+
+    public void Deposit(String from, double amount, String to, int accountID) {
+
+        double amounTo;
+        double amountWithdraw;
+        if (from != null && amount != 0 && to != null) {
+
+            try {
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank?serverTimezone=UTC", "root", "");
+
+                String getBankAccount = "SELECT Amount FROM bankaccount WHERE account_ID = " + accountID + " AND Description = '" + from + "';";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(getBankAccount);
+                resultSet.next();
+                double depositBankAccountAmount = resultSet.getDouble(1);
+
+                amounTo = depositBankAccountAmount - amount;
+
+                String updateDepositBankAccount = "UPDATE bankaccount SET Amount=? WHERE account_ID = " + accountID + " AND Description = '" + from + "';";
+                preparedStatement = connection.prepareStatement(updateDepositBankAccount);
+                preparedStatement.setDouble(1, amounTo);
+                preparedStatement.executeUpdate();
+
+                String getBankAccountWithdraw = "SELECT Amount FROM bankaccount WHERE account_ID = " + accountID + " AND Description = '" + to + "';";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(getBankAccountWithdraw);
+                resultSet.next();
+                double withdrawBankAccountAmount = resultSet.getDouble(1);
+
+                amountWithdraw = withdrawBankAccountAmount + amount;
+
+                String updateWithdrawBankAccount = "UPDATE bankaccount SET Amount=? WHERE account_ID = " + accountID + " AND Description = '" + to + "';";
+                preparedStatement = connection.prepareStatement(updateWithdrawBankAccount);
+                preparedStatement.setDouble(1, amounTo);
+                preparedStatement.executeUpdate();
+
+            } catch (SQLException ex) {
+                System.out.println(ex);
+            }
+
         }
     }
 

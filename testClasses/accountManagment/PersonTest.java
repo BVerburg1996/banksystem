@@ -1,26 +1,36 @@
 package accountManagment;
 
+import database.PersonDAO;
 import interfaces.IPerson;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.util.ArrayList;
 
-class PersonTest implements IPerson {
+import static org.junit.jupiter.api.Assertions.*;
+
+class PersonTest {
 
     Person person = new Person("Iemand", "Iemand", "ab25258", "diederikn", "Nederlands");
 
     Account account = new Account("UserName", "Password");
-    @Test
-    @Override
-    public void CreateAccount(Person person, Account account) {
 
-
-    }
+    PersonDAO personDAO = new PersonDAO();
 
     @Test
-    @Override
-    public Person Read(String string) {
-        return null;
+    public void testCreateRead() {
+
+        Person p = new Person();
+
+        person.CreateAccount(person, account);
+
+        p = person.Read(person.getAccountNumber());
+
+        assertNotNull(p);
+
+        personDAO.Delete(person);
+
+        p = person.Read(person.getAccountNumber());
+
+        assertNull(p);
     }
 }

@@ -9,9 +9,6 @@ import java.util.List;
 
 public class Account implements IAccount {
 
-
-
-    private int personID;
     private String userName;
     private String password;
     public ArrayList<Account> accounts;
@@ -36,19 +33,23 @@ public class Account implements IAccount {
     }
 
     @Override
-    public List<BankAccount> ReadBankAccount(String bankAccountID) {
-        return accountDAO.readAll(bankAccountID);
+    public ArrayList<BankAccount> ReadBankAccount(String bankAccountID) {
+
+        return accountDAO.ReadAll(bankAccountID);
     }
 
     @Override
     public void DeleteBankAccount(BankAccount bankAccount) {
-        accountDAO.Delete(bankAccount);
+        accountDAO.DeleteBankAccount(bankAccount);
     }
 
-    public void CreateTransAction(BankAccount bankAccount, double amount, BankAccount bankAccount2, int accountDeposit, int accountWithdraw){
-        accountDAO.Deposit(bankAccount, amount, accountDeposit);
+    @Override
+    public void CreateTransAction(Person person1, double amount, Person person2){
 
-        accountDAO.WithDraw(bankAccount2, amount, accountWithdraw);
+    }
+
+    public void Deposit(String from, double amount, String to, int accountID){
+        accountDAO.Deposit(from, amount, to, accountID);
     }
 
     @Override
@@ -74,9 +75,5 @@ public class Account implements IAccount {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public int getPersonID() {
-        return personID;
     }
 }

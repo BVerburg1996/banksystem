@@ -9,12 +9,11 @@ import java.awt.event.*;
 
 public class newpersonPanel<headers> extends JFrame {
 
-    private Font f = new Font("Arial", Font.BOLD,18);
+   public static void main(String[] args) {
+       newpersonPanel frameTabel = new newpersonPanel();
+   }
 
-    public static void main(String[] args) {
-        newpersonPanel frameTabel = new newpersonPanel();
-    }
-
+    //Set all elements to the new person panel
     JLabel title = new JLabel("Nieuw account aanmaken");
     JLabel preUsername = new JLabel("Gebruikersnaam");
     JLabel prePassword = new JLabel("Wachtwoord");
@@ -33,16 +32,18 @@ public class newpersonPanel<headers> extends JFrame {
     JButton backToLogin = new JButton("Terug");
     JPanel panel = new JPanel();
 
+    //Dropdown of availible languages
     String[] Languages = {"NL", "USA", "GB", "HUN", "JPN", "MEX", "TSJ", "ZWE", "CHI", "MAR" };
-
     JComboBox language = new JComboBox(Languages);
 
+    //Set up the new person panel
     newpersonPanel(){
         super("B$nk");
         setSize(500, 500);
         setLocation(700,300);
         panel.setLayout (null);
 
+        //Give all the elements their place
         title.setBounds(125,10,250,60);
         preUsername.setBounds(112,60,250,20);
         username.setBounds(112, 80, 250, 25);
@@ -61,6 +62,7 @@ public class newpersonPanel<headers> extends JFrame {
         submitnewperson.setBounds(50,400, 150, 25);
         backToLogin.setBounds(300,400, 150, 25);
 
+        //.. And add them all to the panel
         panel.add(title);
         panel.add(preUsername);
         panel.add(username);
@@ -78,16 +80,20 @@ public class newpersonPanel<headers> extends JFrame {
         panel.add(language);
         panel.add(submitnewperson);
         panel.add(backToLogin);
-        title.setFont(f);
+        title.setFont(overviewPanel.f);
 
+        //Set the panel visible and initialise all event handlers
         getContentPane().add(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setBackToMain();
         setNewPerson();
     }
+
+    //event handler submit button
     public void setNewPerson() {
         submitnewperson.addActionListener(e -> {
+            //Set all the values necessary for adding the new person and account
             String uname = username.getText();
             String pwrd = password.getText();
             String firstname = name.getText();
@@ -96,19 +102,38 @@ public class newpersonPanel<headers> extends JFrame {
             String mail = email.getText();
             String chosenLanguage = (String) language.getSelectedItem();
 
-            Person person = new Person(firstname, lastname, accountnumber, mail, chosenLanguage);
-            Account account = new Account(uname, pwrd);
+            //Check if all fields are filled and email is valid
+            if(!uname.equals("") && !pwrd.equals("") && !firstname.equals("") && !lastname.equals("") && !accountnumber.equals("") && !mail.equals("") && mail.contains("@")) {
+                //Create the new person
+                Person person = new Person(firstname, lastname, accountnumber, mail, chosenLanguage);
 
-            person.CreateAccount(person, account);
+                //Create the new account
+                Account account = new Account(uname, pwrd);
 
-            JOptionPane.showMessageDialog(null,"Uw account is aangemaakt!");
+                //...And submit them to the database
+                person.CreateAccount(person, account);
 
-            loginPanel loginPanel =new loginPanel();
-            loginPanel.setVisible(true);
-            dispose();
+                //Show confirmation and redirect to login panel
+                JOptionPane.showMessageDialog(null, "Uw account is aangemaakt!");
+                loginPanel loginPanel = new loginPanel();
+                loginPanel.setVisible(true);
+                dispose();
+            }
+            //Error and reset panel
+            else {
+                JOptionPane.showMessageDialog(null, "U heeft niet alle velden correct ingevuld");
+                username.setText("");
+                password.setText("");
+                name.setText("");
+                surname.setText("");
+                email.setText("");
+                accountNumber.setText("");
+                username.requestFocus();
+            }
         });
     }
 
+    //Event handler backbutton (to login page)
     public void setBackToMain(){
         backToLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {

@@ -1,20 +1,21 @@
 package Panels;
 
 import accountManagment.*;
+import database.AccountDAO;
+import database.PersonDAO;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-
 
 public class transactionPanel<headers> extends JFrame {
 
-    private Font f = new Font("Arial", Font.BOLD,18);
+    //Set the toWho sting, filled on line 61
+    String toWho;
 
     public static void main(String[] args) {
         transactionPanel frameTabel = new transactionPanel();
     }
 
+    //Set all the elements on the panel
     JLabel title = new JLabel("Nieuwe transactie");
     JLabel preAmount = new JLabel("Hoeveel wilt u overmaken?");
     JLabel preToInput = new JLabel("Naar Rekeningnummer");
@@ -24,13 +25,14 @@ public class transactionPanel<headers> extends JFrame {
     JButton backToMain = new JButton("Terug");
     JPanel panel = new JPanel();
 
-
+    //Initialise the transaction panel
     transactionPanel(){
         super("B$nk");
         setSize(500,500);
         setLocation(700,300);
         panel.setLayout (null);
 
+        //Give all the elements their own place
         title.setBounds(125,10,250,60);
         preAmount.setBounds(100, 70, 250, 25);
         amountInput.setBounds(100, 90, 250, 25);
@@ -39,6 +41,7 @@ public class transactionPanel<headers> extends JFrame {
         submitTransaction.setBounds(140,170, 150, 25);
         backToMain.setBounds(140,220, 150, 25);
 
+        //... And add them to the panel
         panel.add(title);
         panel.add(preAmount);
         panel.add(amountInput);
@@ -46,8 +49,9 @@ public class transactionPanel<headers> extends JFrame {
         panel.add(toInput);
         panel.add(submitTransaction);
         panel.add(backToMain);
-        title.setFont(f);
+        title.setFont(overviewPanel.f);
 
+        //Set panel to visible and initialise the event handlers
         getContentPane().add(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
@@ -55,23 +59,46 @@ public class transactionPanel<headers> extends JFrame {
         setBackToMain();
     }
 
+    //Event handler submit button
     public void setTransaction() {
         submitTransaction.addActionListener(e -> {
+
+            //Set all the necessary values
             Double amount = Double.valueOf(amountInput.getText());
-            String toWho = toInput.getText();
+            toWho = toInput.getText();
 
-            Account account = new Account ();
-            BankAccount bankAccount = new BankAccount();
+            if(amount > 0.0 && amount != 0 && !toWho.equals("")) {
+                //Create new personDAO
+                PersonDAO personDAO = new PersonDAO();
 
-            account.CreateTransAction(bankAccount, amount,bankAccount, 2 , overviewPanel.currentID);
+                //Create new person, and set it to the person who will receive the money
+                Person personTo = new Person();
+                personTo = personDAO.read(toWho);
 
-            JOptionPane.showMessageDialog(null,"Uw transactie van " + amount + " naar " + toWho + " is verzonden!");
-            overviewPanel overviewPanel =new overviewPanel();
-            overviewPanel.setVisible(true);
-            dispose();
+                //Create new person, and set it to the person who will submit the money
+                Person personFrom = new Person();
+                personFrom = personDAO.read(loginPanel.accountNumber);
+
+                //Create new AccountDAO, and fire the createtransaction method
+                AccountDAO accountDAO = new AccountDAO();
+                accountDAO.CreateTransAction(personFrom, amount, personTo);
+
+                //Show confirmation, and redirects back to overview panel
+                JOptionPane.showMessageDialog(null, "Uw transactie van " + amount + " naar " + toWho + " is verzonden!");
+                overviewPanel overviewPanel = new overviewPanel();
+                overviewPanel.setVisible(true);
+                dispose();
+            }
+            else    {
+                JOptionPane.showMessageDialog(null, "U heeft niet alle velden correct ingevuld");
+                amountInput.setText("");
+                toInput.setText("");
+                amountInput.requestFocus();
+            }
         });
     }
 
+    //Eventhandler backbutton
     public void setBackToMain(){
         backToMain.addActionListener(ae -> {
             overviewPanel overviewPanel =new overviewPanel();

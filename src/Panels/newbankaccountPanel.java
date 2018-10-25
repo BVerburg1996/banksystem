@@ -5,17 +5,14 @@ import accountManagment.BankAccount;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-
 
 public class newbankaccountPanel<headers> extends JFrame {
-
-    private Font f = new Font("Arial", Font.BOLD,18);
 
     public static void main(String[] args) {
         newbankaccountPanel frameTabel = new newbankaccountPanel();
     }
 
+    //Creates all elements on the page
     JLabel title = new JLabel("Nieuw bankaccount");
     JLabel preStartAmount = new JLabel("Saldo als start");
     JLabel preDescription = new JLabel("Beschrijving");
@@ -27,13 +24,14 @@ public class newbankaccountPanel<headers> extends JFrame {
     JButton backToMain = new JButton("Terug");
     JPanel panel = new JPanel();
 
-
+    //Design of the new bankaccount panel
     newbankaccountPanel(){
         super("B$nk");
         setSize(500,500);
         setLocation(700,300);
         panel.setLayout (null);
 
+        //Give all elements their place on the panel
         title.setBounds(125,10,250,60);
         preStartAmount.setBounds(100, 70, 250, 25);
         startAmountInput.setBounds(100, 90, 250, 25);
@@ -44,6 +42,7 @@ public class newbankaccountPanel<headers> extends JFrame {
         submitnewbankaccount.setBounds(140,230, 150, 25);
         backToMain.setBounds(140,270, 150, 25);
 
+        //Add all to panel
         panel.add(title);
         panel.add(preStartAmount);
         panel.add(startAmountInput);
@@ -53,8 +52,9 @@ public class newbankaccountPanel<headers> extends JFrame {
         panel.add(bankAccountNumber);
         panel.add(confirmation);
         panel.add(backToMain);
-        title.setFont(f);
+        title.setFont(overviewPanel.f);
 
+        //Set panel to visible and initialise the event handlers
         getContentPane().add(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
@@ -62,20 +62,40 @@ public class newbankaccountPanel<headers> extends JFrame {
         setBackToMain();
     }
 
+    //Event handler of the submit button
     public void setNewBankAccount() {
         submitnewbankaccount.addActionListener(e -> {
+            //Set all the values necessary for the new bank account
             double amount = Double.parseDouble(startAmountInput.getText());
             String description = descriptionInput.getText();
-            BankAccount bankAccount = new BankAccount(amount, description);
-            Account account = new Account();
-            account.CreateBankAccount(bankAccount, bankAccountNumber.getText());
-            JOptionPane.showMessageDialog(null,"Uw nieuwe bankaccount " + description + " is aangemaakt met " + amount + " als startbedrag");
-            overviewPanel overviewPanel = new overviewPanel();
-            overviewPanel.setVisible(true);
-            dispose();
+
+            //Amount can't be negative and description must be filled
+            if(amount>0.0 && !description.equals(null)) {
+
+                //Initialise new bankaccount and account
+                BankAccount bankAccount = new BankAccount(amount, description);
+                Account account = new Account();
+
+                //Execute the create bank account
+                account.CreateBankAccount(bankAccount, bankAccountNumber.getText());
+
+                //Show confirmation, and open the overview panel
+                JOptionPane.showMessageDialog(null, "Uw nieuwe bankaccount " + description + " is aangemaakt met " + amount + " als startbedrag");
+                overviewPanel overviewPanel = new overviewPanel();
+                overviewPanel.setVisible(true);
+                dispose();
+            }
+            //Else return error
+            else {
+                JOptionPane.showMessageDialog(null, "U heeft niet alle velden correct ingevuld");
+                startAmountInput.setText("");
+                descriptionInput.setText("");
+                startAmountInput.requestFocus();
+            }
         });
     }
 
+    //Backbutton event handler
     public void setBackToMain(){
         backToMain.addActionListener(ae -> {
             overviewPanel overviewPanel = new overviewPanel();
